@@ -1,12 +1,29 @@
-import AbstractView from "./AbstractView.js";
+import AbstractView from './AbstractView.js';
 
-export default class extends AbstractView{
-    constructor(params) {
-        super(params);
-        this.setTitle("Homepage");
-    }
+export default class extends AbstractView {
+  constructor(params) {
+    super(params);
+    this.setTitle('Homepage');
+  }
 
-    async getHTML() {
-        return "<h1>Homepage</h1>";
-    }
+  async getHTML() {
+    const div = document.createElement('div');
+    const p = document.createElement('p');
+    const h1 = document.createElement('h1');
+    const img = document.createElement('img');
+    h1.innerHTML = 'Title';
+
+    return `
+    <div class='container'>
+      <div class='bg-box'>
+        <div class='bg-pic'>
+          <div class='title-text'>
+            <h1>Get ready to travel?</h1>
+            <p>Serach countries you want to go</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    `;
+  }
 }

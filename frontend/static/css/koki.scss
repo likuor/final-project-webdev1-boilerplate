@@ -1,0 +1,34 @@
+$bgSecondaryColor: #abcbc7;
+$textMainyColor: #f2f2f2f2;
+
+.container {
+  background-color: $bgSecondaryColor;
+  padding: 3vw;
+
+  .bg-box {
+    padding: 3vw;
+    background-color: $textMainyColor;
+    margin: 0 auto;
+    border-radius: 20px;
+  }
+
+  .bg-pic {
+    padding: 20vw;
+    background-image: url('../img/hero6.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+
+    .title-text {
+      text-align: center;
+      color: $textMainyColor;
+
+      h1 {
+        font-size: 4vw;
+      }
+      p {
+        font-size: 2vw;
+      }
+    }
+  }
+}
