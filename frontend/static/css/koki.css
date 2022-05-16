@@ -1,16 +1,16 @@
 .container {
   background-color: #abcbc7;
   padding: 3vw;
+  height: 100%;
 }
 .container .bg-box {
   padding: 3vw;
   background-color: rgba(242, 242, 242, 0.9490196078);
-  margin: 0 auto;
   border-radius: 20px;
 }
 .container .bg-pic {
   padding: 20vw;
-  background-image: url("../img/hero6.jpg");
+  background-image: url("../img/hero2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 20px;
@@ -20,8 +20,56 @@
   color: rgba(242, 242, 242, 0.9490196078);
 }
 .container .bg-pic .title-text h1 {
-  font-size: 4vw;
+  font-size: 10vw;
 }
 .container .bg-pic .title-text p {
-  font-size: 2vw;
+  font-size: 8vw;
+}
+.container .title-button {
+  text-align: center;
+  margin: 2rem;
+}
+.container .title-button button {
+  padding: 2vw 10vw;
+  border-radius: 20px;
+  border: none;
+}
+
+@media (min-width: 768px) {
+  .container {
+    background-color: #abcbc7;
+    padding: 3vw;
+  }
+  .container .bg-box {
+    padding: 3vw;
+    background-color: rgba(242, 242, 242, 0.9490196078);
+    margin: 0 auto;
+    border-radius: 20px;
+  }
+  .container .bg-pic {
+    padding: 20vw;
+    background-image: url("../img/hero6.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 20px;
+  }
+  .container .bg-pic .title-text {
+    text-align: center;
+    color: rgba(242, 242, 242, 0.9490196078);
+  }
+  .container .bg-pic .title-text h1 {
+    font-size: 4vw;
+  }
+  .container .bg-pic .title-text p {
+    font-size: 2vw;
+  }
+  .container .title-button {
+    text-align: center;
+    margin: 2rem;
+  }
+  .container .title-button button {
+    padding: 1vw 5vw;
+    border-radius: 20px;
+    border: none;
+  }
 }/*# sourceMappingURL=koki.css.map */

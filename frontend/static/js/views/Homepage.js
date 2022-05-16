@@ -19,7 +19,13 @@ export default class extends AbstractView {
         <div class='bg-pic'>
           <div class='title-text'>
             <h1>Get ready to travel?</h1>
+
             <p>Serach countries you want to go</p>
+          </div>
+          <div class='title-button'>
+            <a href="/countries">
+              <button>Go search</button>
+            </a>
           </div>
         </div>
       </div>

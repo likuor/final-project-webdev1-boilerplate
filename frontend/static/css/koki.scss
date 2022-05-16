@@ -4,17 +4,17 @@ $textMainyColor: #f2f2f2f2;
 .container {
   background-color: $bgSecondaryColor;
   padding: 3vw;
+  height: 100%;
 
   .bg-box {
     padding: 3vw;
     background-color: $textMainyColor;
-    margin: 0 auto;
     border-radius: 20px;
   }
 
   .bg-pic {
     padding: 20vw;
-    background-image: url('../img/hero6.jpg');
+    background-image: url('../img/hero2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 20px;
@@ -24,10 +24,66 @@ $textMainyColor: #f2f2f2f2;
       color: $textMainyColor;
 
       h1 {
-        font-size: 4vw;
+        font-size: 10vw;
       }
       p {
-        font-size: 2vw;
+        font-size: 8vw;
+      }
+    }
+  }
+
+  .title-button {
+    text-align: center;
+    margin: 2rem;
+
+    button {
+      padding: 2vw 10vw;
+      border-radius: 20px;
+      border: none;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    background-color: $bgSecondaryColor;
+    padding: 3vw;
+
+    .bg-box {
+      padding: 3vw;
+      background-color: $textMainyColor;
+      margin: 0 auto;
+      border-radius: 20px;
+    }
+
+    .bg-pic {
+      padding: 20vw;
+      background-image: url('../img/hero6.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      border-radius: 20px;
+
+      .title-text {
+        text-align: center;
+        color: $textMainyColor;
+
+        h1 {
+          font-size: 4vw;
+        }
+        p {
+          font-size: 2vw;
+        }
+      }
+    }
+
+    .title-button {
+      text-align: center;
+      margin: 2rem;
+
+      button {
+        padding: 1vw 5vw;
+        border-radius: 20px;
+        border: none;
       }
     }
   }
