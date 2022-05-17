@@ -1,62 +1,124 @@
 $iconPrimaryColor: #c9cccc;
 
-.view-container {
-  padding: 3vw;
-  height: auto;
-  width: 100%;
-  background-color: #f7f7f7;
-}
-
-.countryContainaer {
-  margin-top: 3vw;
-  display: grid;
-  grid-template-rows: repeat(3, 1fr);
-  gap: 10px;
-  width: 100%;
-
-  .flag {
+@media (max-width: 767px) {
+  .view-container {
+    padding: 3vw;
+    height: auto;
     width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: #f7f7f7;
+  }
 
-    img {
+  .countryContainaer {
+    margin-top: 3vw;
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+
+    .flag {
       width: 100%;
-    }
-  }
-
-  .countryDetail {
-    h1 {
-      padding: 2vw 0;
-    }
-
-    p {
-      padding: 1vw 0;
-    }
-
-    span {
-      font-weight: bold;
-    }
-
-    .secondCountryDetail {
-      margin-top: 1rem;
-    }
-  }
-
-  .borderCountryDetail {
-    width: 100%;
-
-    .borderCountryDetailContainer {
-      margin-top: 3vw;
       display: flex;
-      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .countryDetail {
+      h1 {
+        padding: 2vw 0;
+      }
+
+      p {
+        padding: 1vw 0;
+      }
 
       span {
-        width: 20vw;
-        padding: 2vw;
-        text-align: center;
-        margin: 1vw;
-        background-color: $iconPrimaryColor;
+        font-weight: bold;
+      }
+
+      .secondCountryDetail {
+        margin-top: 1rem;
+      }
+    }
+
+    .borderCountryDetail {
+      width: 100%;
+
+      .borderCountryDetailContainer {
+        display: flex;
+        flex-wrap: wrap;
+
+        span {
+          width: 20vw;
+          padding: 2vw;
+          text-align: center;
+          margin: 0.4rem;
+          background-color: $iconPrimaryColor;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  .view-container {
+    height: 100vh;
+  }
+  .countryContainaer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: blue;
+    height: 80vh;
+
+    .flag {
+      width: 80%;
+      margin: 2vw;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .countryDetail {
+      background-color: aqua;
+      margin: 2vw;
+      height: 70%;
+
+      p {
+        padding: 0.3rem 0;
+      }
+
+      span {
+        font-weight: bold;
+      }
+
+      .countryExplanation {
+        display: flex;
+      }
+
+      .firstCountryDetail {
+        background-color: green;
+        width: 50%;
+      }
+      .secondCountryDetail {
+        background-color: yellow;
+        width: 50%;
+        margin-top: 2.2rem;
+      }
+
+      .borderCountryDetailContainer {
+        display: flex;
+        flex-wrap: wrap;
+
+        span {
+          padding: 0.4rem 0.8rem;
+          text-align: center;
+          margin: 0.4rem;
+          background-color: $iconPrimaryColor;
+        }
       }
     }
   }

@@ -72,30 +72,37 @@ export default class extends AbstractView {
                   <img src="${countryData[0].flags.png}"/>
               </div>
               <div class='countryDetail'>
-                <div class='firstCountryDetail'>
-                    <h1>${countryData[0].name.common}</h1>
-                    <p><span>Native Name:</span> ${
-                      countryData[0].altSpellings[1]
-                    }</p>
-                    <p><span>Population:</span> ${population}</p>
-                    <p><span>Region:</span> ${countryData[0].region}</p>
-                    <p><span>Sub Region:</span> ${countryData[0].subregion}</p>
-                    <p><span>Capital:</span> ${countryData[0].capital}</p>
-                </div>
+                <div class='countryExplanation'>
 
-                <div class='secondCountryDetail'>
-                    <p><span>Top Level Domain:</span> ${countryData[0].tld}</p>
-                    <p><span>Currencies:</span> ${currenciesArray[0].name} (${
+                  <div class='firstCountryDetail'>
+                      <h1>${countryData[0].name.common}</h1>
+                      <p><span>Native Name:</span> ${
+                        countryData[0].altSpellings[1]
+                      }</p>
+                      <p><span>Population:</span> ${population}</p>
+                      <p><span>Region:</span> ${countryData[0].region}</p>
+                      <p><span>Sub Region:</span> ${
+                        countryData[0].subregion
+                      }</p>
+                      <p><span>Capital:</span> ${countryData[0].capital}</p>
+                  </div>
+
+                  <div class='secondCountryDetail'>
+                      <p><span>Top Level Domain:</span> ${
+                        countryData[0].tld
+                      }</p>
+                      <p><span>Currencies:</span> ${currenciesArray[0].name} (${
       currenciesArray[0].symbol
     })</p>
-                    <p><span>Languages:</span> ${languages}</p>
+                      <p><span>Languages:</span> ${languages}</p>
+                  </div>
                 </div>
-              </div>
-              <div class='borderCountryDetail'>
+                <div class='borderCountryDetail'>
                   <h1>Border Countries</h1>
                   <div class='borderCountryDetailContainer'>
                     ${displayBorders(borders)}
                   </div>
+                </div>
               </div>
           </div>
         </div>
