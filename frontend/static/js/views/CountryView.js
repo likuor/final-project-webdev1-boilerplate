@@ -55,7 +55,8 @@ export default class extends AbstractView {
     const displayBorders = (array) => {
       for (let i = 0; i < array.length; i++) {
         console.log(array[i]);
-        test += `<span>${array[i]}</span>`;
+        console.log();
+        test += `<li><a href='${array[i]}'><span>${array[i]}</span></a></li>`;
       }
       return test;
     };
@@ -100,7 +101,9 @@ export default class extends AbstractView {
                 <div class='borderCountryDetail'>
                   <h1>Border Countries</h1>
                   <div class='borderCountryDetailContainer'>
+                    <ul>
                     ${displayBorders(borders)}
+                    </ul>
                   </div>
                 </div>
               </div>
