@@ -1,3 +1,54 @@
+.view-container {
+  padding: 3vw;
+  height: auto;
+  width: 100%;
+  background-color: #f7f7f7;
+}
+
+.countryContainaer {
+  margin-top: 3vw;
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  gap: 10px;
+  width: 100%;
+}
+.countryContainaer .flag {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.countryContainaer .flag img {
+  width: 100%;
+}
+.countryContainaer .countryDetail h1 {
+  padding: 2vw 0;
+}
+.countryContainaer .countryDetail p {
+  padding: 1vw 0;
+}
+.countryContainaer .countryDetail span {
+  font-weight: bold;
+}
+.countryContainaer .countryDetail .secondCountryDetail {
+  margin-top: 1rem;
+}
+.countryContainaer .borderCountryDetail {
+  width: 100%;
+}
+.countryContainaer .borderCountryDetail .borderCountryDetailContainer {
+  margin-top: 3vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+.countryContainaer .borderCountryDetail .borderCountryDetailContainer span {
+  width: 20vw;
+  padding: 2vw;
+  text-align: center;
+  margin: 1vw;
+  background-color: #c9cccc;
+}
+
 .container {
   background-color: #abcbc7;
   padding: 3vw;
@@ -29,7 +80,8 @@
   text-align: center;
   margin: 2rem;
 }
-.container .title-button button {
+
+button {
   padding: 2vw 10vw;
   border-radius: 20px;
   border: none;

@@ -10,14 +10,32 @@ export default class extends AbstractView {
   async getHTML() {
     const countries = getCountries();
     const id = this.params.id;
-    let languages = [];
-    let borders = [];
 
     //Getting a country data by id
-    let countryData = countries.filter((value) => {
+    const countryData = countries.filter((value) => {
       return value['cca3'] === id;
     });
     console.log(countryData);
+
+    const languages = [];
+    const borders = [];
+    const currenciesArray = [];
+    const population = countryData[0].population.toLocaleString();
+
+    // const getData = (dataTitle, array) => {
+    //   for (const key in countryData[0].dataTitle) {
+    //     array = array.push(countryData[0].dataTitle[key]);
+    //   }
+    //   console.log(array);
+    //   return array;
+    // };
+    // getData('currencies', currenciesArray);
+    // console.log(getData('languages', languages));
+
+    // Getting currencies data
+    for (const key in countryData[0].currencies) {
+      currenciesArray.push(countryData[0].currencies[key]);
+    }
 
     //Getting language data
     for (const key in countryData[0].languages) {
@@ -33,30 +51,53 @@ export default class extends AbstractView {
       borders.push('None');
     }
 
+    let test = '';
+    const displayBorders = (array) => {
+      for (let i = 0; i < array.length; i++) {
+        console.log(array[i]);
+        test += `<span>${array[i]}</span>`;
+      }
+      return test;
+    };
+
     return `
         <div class='view-container'>
-            <div>
-                <button>back</button>
-            </div>
-            <div>
-                <div>
-                    <img src="${countryData[0].flags.png}"/>
-                </div>
-                <div>
+          <div>
+              <a href="/countries">
+                  <button>back</button>
+              </a>
+          </div>
+          <div class='countryContainaer'>
+              <div class='flag'>
+                  <img src="${countryData[0].flags.png}"/>
+              </div>
+              <div class='countryDetail'>
+                <div class='firstCountryDetail'>
                     <h1>${countryData[0].name.common}</h1>
-                    <h2>Native Name: ${countryData[0].altSpellings[1]}</h2>
-                    <h2>Population: ${countryData[0].population}</h2>
-                    <h2>Region: ${countryData[0].region}</h2>
-                    <h2>Sub Region: ${countryData[0].subregion}</h2>
-                    <h2>Capital: ${countryData[0].capital}</h2>
-                    <h2>Languages: ${languages}</h2>
+                    <p><span>Native Name:</span> ${
+                      countryData[0].altSpellings[1]
+                    }</p>
+                    <p><span>Population:</span> ${population}</p>
+                    <p><span>Region:</span> ${countryData[0].region}</p>
+                    <p><span>Sub Region:</span> ${countryData[0].subregion}</p>
+                    <p><span>Capital:</span> ${countryData[0].capital}</p>
                 </div>
-                <div>
-                    <h1>Border Countries</h1>
 
-                    <p>${borders}</p>
+                <div class='secondCountryDetail'>
+                    <p><span>Top Level Domain:</span> ${countryData[0].tld}</p>
+                    <p><span>Currencies:</span> ${currenciesArray[0].name} (${
+      currenciesArray[0].symbol
+    })</p>
+                    <p><span>Languages:</span> ${languages}</p>
                 </div>
-            </div>
+              </div>
+              <div class='borderCountryDetail'>
+                  <h1>Border Countries</h1>
+                  <div class='borderCountryDetailContainer'>
+                    ${displayBorders(borders)}
+                  </div>
+              </div>
+          </div>
         </div>
         `;
   }
