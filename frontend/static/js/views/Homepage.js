@@ -12,17 +12,24 @@ export default class extends AbstractView {
     const h1 = document.createElement('h1');
     const img = document.createElement('img');
     h1.innerHTML = 'Title';
+    // img.src = '../../img/hero.jpg';
 
     return `
     <div class='container'>
-      <div class='bg-box'>
         <div class='bg-pic'>
           <div class='title-text'>
             <h1>Get ready to travel?</h1>
             <p>Serach countries you want to go</p>
+
+            <div class='title-button'>
+              <a href='/countries'>
+                <div class='button'>
+                  <span>Go Search</span>
+                </div>
+              </a>
+            </div>
           </div>
         </div>
-      </div>
     </div>
     `;
   }

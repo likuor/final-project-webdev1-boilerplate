@@ -1,4 +1,4 @@
-import {getCountries} from './countries.js'
+import { getCountries } from './countries.js';
 
 const countries = getCountries();
 

@@ -1,0 +1,157 @@
+$tagPrimaryColor: #c9cccc;
+
+.view-container {
+  a {
+    text-decoration: none;
+  }
+
+  .backButton {
+    padding: 1vw 3vw;
+    border-radius: 20px;
+    border: none;
+    background-color: #01a690;
+    color: #f7f7f7;
+    display: inline;
+  }
+
+  .backButton:hover {
+    background-color: #abcbc7;
+    color: #3a3c3e;
+    box-shadow: 10px 15px 22px -5px rgba(0, 0, 0, 0.2),
+      0 0 2px rgba(0, 0, 0, 0.15);
+  }
+
+  padding: 3vw;
+  height: auto;
+  width: 100%;
+  background-color: #f7f7f7;
+}
+
+.countryContainaer {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 10px;
+  width: 100%;
+
+  .flag {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    img {
+      width: 100%;
+      box-shadow: 10px 15px 22px -5px rgba(0, 0, 0, 0.2),
+        0 0 2px rgba(0, 0, 0, 0.15);
+    }
+  }
+
+  .countryDetail {
+    h1 {
+      padding: 1rem 0;
+    }
+
+    p {
+      padding: 0.4rem 0;
+
+      span {
+        font-weight: bold;
+      }
+    }
+
+    .secondCountryDetail {
+      margin-top: 1rem;
+    }
+  }
+
+  .borderCountryDetail {
+    width: 100%;
+
+    .borderCountryDetailContainer {
+      ul {
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: start;
+      }
+      li {
+        list-style: none;
+        min-width: 5rem;
+        min-height: 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #01a690;
+        margin: 0.2rem;
+        border-radius: 20px;
+
+        span {
+          display: block;
+        }
+
+        a {
+          color: #f7f7f7;
+        }
+      }
+
+      li:hover {
+        background-color: #abcbc7;
+        box-shadow: 10px 15px 22px -5px rgba(0, 0, 0, 0.2),
+          0 0 2px rgba(0, 0, 0, 0.15);
+        a {
+          color: #3a3c3e;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .view-container {
+    .backButtonContainer {
+      padding: 0 2vw;
+    }
+
+    font-size: 1vw;
+    height: 100vh;
+  }
+  .countryContainaer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: none;
+    height: 80vh;
+
+    .flag {
+      display: block;
+      padding: 0 2vw;
+    }
+
+    .countryDetail {
+      height: 70%;
+
+      .countryExplanation {
+        display: flex;
+      }
+
+      .firstCountryDetail {
+        width: 50%;
+      }
+      .secondCountryDetail {
+        width: 50%;
+        margin-top: 0rem;
+      }
+
+      .borderCountryDetailContainer {
+        span {
+          padding: 0.4rem 0.8rem;
+          text-align: center;
+          margin: 0.4rem;
+        }
+        li {
+          min-width: 4rem;
+        }
+      }
+    }
+  }
+}

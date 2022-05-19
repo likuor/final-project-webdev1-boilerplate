@@ -1,27 +1,184 @@
-.container {
-  background-color: #abcbc7;
+.view-container {
   padding: 3vw;
+  height: auto;
+  width: 100%;
+  background-color: #f7f7f7;
 }
-.container .bg-box {
-  padding: 3vw;
-  background-color: rgba(242, 242, 242, 0.9490196078);
-  margin: 0 auto;
+.view-container a {
+  text-decoration: none;
+}
+.view-container .backButton {
+  padding: 1vw 3vw;
   border-radius: 20px;
+  border: none;
+  background-color: #01a690;
+  color: #f7f7f7;
+  display: inline;
+}
+.view-container .backButton:hover {
+  background-color: #abcbc7;
+  color: #3a3c3e;
+  box-shadow: 10px 15px 22px -5px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.15);
+}
+
+.countryContainaer {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  gap: 10px;
+  width: 100%;
+}
+.countryContainaer .flag {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.countryContainaer .flag img {
+  width: 100%;
+  box-shadow: 10px 15px 22px -5px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.15);
+}
+.countryContainaer .countryDetail h1 {
+  padding: 1rem 0;
+}
+.countryContainaer .countryDetail p {
+  padding: 0.4rem 0;
+}
+.countryContainaer .countryDetail p span {
+  font-weight: bold;
+}
+.countryContainaer .countryDetail .secondCountryDetail {
+  margin-top: 1rem;
+}
+.countryContainaer .borderCountryDetail {
+  width: 100%;
+}
+.countryContainaer .borderCountryDetail .borderCountryDetailContainer ul {
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: start;
+}
+.countryContainaer .borderCountryDetail .borderCountryDetailContainer li {
+  list-style: none;
+  min-width: 5rem;
+  min-height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #01a690;
+  margin: 0.2rem;
+  border-radius: 20px;
+}
+.countryContainaer .borderCountryDetail .borderCountryDetailContainer li span {
+  display: block;
+}
+.countryContainaer .borderCountryDetail .borderCountryDetailContainer li a {
+  color: #f7f7f7;
+}
+.countryContainaer .borderCountryDetail .borderCountryDetailContainer li:hover {
+  background-color: #abcbc7;
+  box-shadow: 10px 15px 22px -5px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.15);
+}
+.countryContainaer .borderCountryDetail .borderCountryDetailContainer li:hover a {
+  color: #3a3c3e;
+}
+
+@media (min-width: 1024px) {
+  .view-container {
+    font-size: 1vw;
+    height: 100vh;
+  }
+  .view-container .backButtonContainer {
+    padding: 0 2vw;
+  }
+
+  .countryContainaer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: none;
+    height: 80vh;
+  }
+  .countryContainaer .flag {
+    display: block;
+    padding: 0 2vw;
+  }
+  .countryContainaer .countryDetail {
+    height: 70%;
+  }
+  .countryContainaer .countryDetail .countryExplanation {
+    display: flex;
+  }
+  .countryContainaer .countryDetail .firstCountryDetail {
+    width: 50%;
+  }
+  .countryContainaer .countryDetail .secondCountryDetail {
+    width: 50%;
+    margin-top: 0rem;
+  }
+  .countryContainaer .countryDetail .borderCountryDetailContainer span {
+    padding: 0.4rem 0.8rem;
+    text-align: center;
+    margin: 0.4rem;
+  }
+  .countryContainaer .countryDetail .borderCountryDetailContainer li {
+    min-width: 4rem;
+  }
+}
+.container {
+  font-size: 1vw;
+  background-color: rgba(242, 242, 242, 0.9490196078);
+  padding: 3vw;
+  height: 100vh;
 }
 .container .bg-pic {
-  padding: 20vw;
-  background-image: url("../img/hero6.jpg");
+  background-image: url("../img/hero2.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 20px;
+  border-radius: 10px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20vw;
 }
 .container .bg-pic .title-text {
   text-align: center;
   color: rgba(242, 242, 242, 0.9490196078);
+  padding: 5vw 10vw;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  border-radius: 10px;
 }
 .container .bg-pic .title-text h1 {
-  font-size: 4vw;
+  font-size: 3rem;
 }
 .container .bg-pic .title-text p {
-  font-size: 2vw;
+  font-size: 1.5rem;
+}
+.container .bg-pic .title-button {
+  text-align: center;
+  margin: 2rem;
+}
+.container .bg-pic .title-button a {
+  text-decoration: none;
+  color: #f7f7f7;
+}
+.container .bg-pic .title-button .button {
+  padding: 1vw 5vw;
+  border-radius: 10px;
+  border: none;
+  background-color: #01a690;
+}
+.container .bg-pic .title-button .button:hover {
+  background-color: #abcbc7;
+  color: #3a3c3e;
+  box-shadow: 10px 15px 22px -5px rgba(0, 0, 0, 0.2), 0 0 2px rgba(0, 0, 0, 0.15);
+}
+
+@media (min-width: 1024px) {
+  .container .bg-pic {
+    background-image: url("../img/hero6.jpg");
+    border-radius: 20px;
+  }
 }/*# sourceMappingURL=koki.css.map */
