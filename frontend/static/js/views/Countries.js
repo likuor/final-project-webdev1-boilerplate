@@ -18,14 +18,14 @@ export default class extends AbstractView{
             card.className = "countryCard"
             card.innerHTML = ` 
             <a href="countries/${countries[i].cca3}">
-                <div class="countryFlag" id="countreis/${countries[i].cca3}">
+                <div class="flags" id="countreis/${countries[i].cca3}">
                     <img src="${countries[i].flags.png}" alt="">
                 </div>
                 <div class="countryInfo">
-                    <h3>${countries[i].name.common}</h3>
-                    <span>Population: ${countries[i].population.toLocaleString()}</span>
-                    <span>Region: ${countries[i].subregion}</span>
-                    <span>Capital: ${countries[i].capital}</span>
+                    <h3 class="name">${countries[i].name.common}</h3>
+                    <span class="num-pop">Population: ${countries[i].population.toLocaleString()}</span>
+                    <span class="region">Region: ${countries[i].subregion}</span>
+                    <span class="capital">Capital: ${countries[i].capital}</span>
                 </div>
             </a>`
             div.appendChild(card);
@@ -42,7 +42,7 @@ export default class extends AbstractView{
                 <div>
                     <select name="filter" id="filter">
                         <option value="" disabled selected>Filter By Region</option>
-                        <option value="Afreica">Africa</option>
+                        <option value="">Africa</option>
                         <option value="America">America</option>
                         <option value="Asia">Asia</option>
                         <option value="Europe">Europe</option>
