@@ -3,13 +3,11 @@ $bgSecondaryColor: #abcbc7;
 $textMainyColor: #f2f2f2f2;
 
 .container {
-  font-size: 1vw;
   background-color: $textMainyColor;
   padding: 3vw;
   height: 100vh;
 
   .bg-pic {
-    // padding: 20vw;
     background-image: url('../img/hero2.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -23,18 +21,19 @@ $textMainyColor: #f2f2f2f2;
     .title-text {
       text-align: center;
       color: $textMainyColor;
-      padding: 5vw 10vw;
+      padding: 30vw 6vw;
       background-color: rgba(0, 0, 0, 0.5);
       width: 100%;
       border-radius: 10px;
 
       h1 {
-        font-size: 3rem;
+        font-size: 1.8rem;
       }
       p {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
       }
     }
+
     .title-button {
       text-align: center;
       margin: 2rem;
@@ -42,6 +41,7 @@ $textMainyColor: #f2f2f2f2;
       a {
         text-decoration: none;
         color: #f7f7f7;
+        font-size: 0.8rem;
       }
 
       .button {
@@ -66,6 +66,23 @@ $textMainyColor: #f2f2f2f2;
     .bg-pic {
       background-image: url('../img/hero6.jpg');
       border-radius: 20px;
+
+      .title-text {
+        padding: 5vw 10vw;
+
+        h1 {
+          font-size: 3rem;
+        }
+        p {
+          font-size: 1.5rem;
+        }
+      }
+
+      .title-button {
+        a {
+          font-size: 1.2rem;
+        }
+      }
     }
   }
 }

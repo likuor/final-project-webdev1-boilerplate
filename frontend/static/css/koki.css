@@ -126,7 +126,6 @@
   }
 }
 .container {
-  font-size: 1vw;
   background-color: rgba(242, 242, 242, 0.9490196078);
   padding: 3vw;
   height: 100vh;
@@ -145,16 +144,16 @@
 .container .bg-pic .title-text {
   text-align: center;
   color: rgba(242, 242, 242, 0.9490196078);
-  padding: 5vw 10vw;
+  padding: 30vw 6vw;
   background-color: rgba(0, 0, 0, 0.5);
   width: 100%;
   border-radius: 10px;
 }
 .container .bg-pic .title-text h1 {
-  font-size: 3rem;
+  font-size: 1.8rem;
 }
 .container .bg-pic .title-text p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 .container .bg-pic .title-button {
   text-align: center;
@@ -163,6 +162,7 @@
 .container .bg-pic .title-button a {
   text-decoration: none;
   color: #f7f7f7;
+  font-size: 0.8rem;
 }
 .container .bg-pic .title-button .button {
   padding: 1vw 5vw;
@@ -180,5 +180,17 @@
   .container .bg-pic {
     background-image: url("../img/hero6.jpg");
     border-radius: 20px;
+  }
+  .container .bg-pic .title-text {
+    padding: 5vw 10vw;
+  }
+  .container .bg-pic .title-text h1 {
+    font-size: 3rem;
+  }
+  .container .bg-pic .title-text p {
+    font-size: 1.5rem;
+  }
+  .container .bg-pic .title-button a {
+    font-size: 1.2rem;
   }
 }/*# sourceMappingURL=koki.css.map */
