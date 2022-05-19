@@ -1,0 +1,38 @@
+body {
+    padding: 2em;
+}
+
+.subHeader {
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+}
+
+.countryCard {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 5px 5px lightgray;
+    width: 20%;
+    padding: 1em;
+    gap: 10px;
+    justify-content: center;
+}
+
+.countryFlag {
+    width: 100%;
+}img {
+    width: 100%;
+}
+
+.countryInfo {
+    display: flex;
+    flex-direction: column;
+}
+
+.countryMenu {
+    width: 95%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 1em;
+}
