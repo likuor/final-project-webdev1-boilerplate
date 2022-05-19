@@ -22,19 +22,18 @@
     color: #01A690;
   }
 
+
+
 $sp: 750px;
 $pc: 1400px;
-@mixin sp {
     @media screen and (max-width: ($sp)) {
-        @content;
+        .countryMenu {   
+            flex-direction: column;
+        }
+        .countryCard {
+            width: 65%!important;
+        }
     }
-}
-
-@mixin pc {
-    @media screen and  (max-width: ($pc)) {
-        @content;
-    }
-}
 
 .subHeader {
     justify-content: space-between;
