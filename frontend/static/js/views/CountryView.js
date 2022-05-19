@@ -17,30 +17,30 @@ export default class extends AbstractView {
     });
     console.log(countryData);
 
-    const languages = [];
+    const languagesArray = [];
     const borders = [];
     const currenciesArray = [];
     const population = countryData[0].population.toLocaleString();
 
-    // const getData = (dataTitle, array) => {
-    //   for (const key in countryData[0].dataTitle) {
-    //     array = array.push(countryData[0].dataTitle[key]);
-    //   }
-    //   console.log(array);
-    //   return array;
-    // };
-    // getData('currencies', currenciesArray);
-    // console.log(getData('languages', languages));
+    const getData = function (dataTitle, array) {
+      //languages
+      switch (dataTitle) {
+        case 'languages':
+          for (const key in countryData[0][dataTitle]) {
+            array.push(countryData[0][dataTitle][key]);
+          }
+          break;
 
-    // Getting currencies data
-    for (const key in countryData[0].currencies) {
-      currenciesArray.push(countryData[0].currencies[key]);
-    }
-
-    //Getting language data
-    for (const key in countryData[0].languages) {
-      languages.push(countryData[0].languages[key]);
-    }
+        case 'currencies':
+          for (const key in countryData[0][dataTitle]) {
+            array.push(countryData[0][dataTitle][key].name);
+            array.push(countryData[0][dataTitle][key].symbol);
+          }
+          break;
+      }
+    };
+    getData('languages', languagesArray);
+    getData('currencies', currenciesArray);
 
     //Getting border data
     if (countryData[0].borders) {
@@ -54,8 +54,6 @@ export default class extends AbstractView {
     let test = '';
     const displayBorders = (array) => {
       for (let i = 0; i < array.length; i++) {
-        console.log(array[i]);
-        console.log();
         test += `<li><a href='${array[i]}'><span>${array[i]}</span></a></li>`;
       }
       return test;
@@ -63,20 +61,23 @@ export default class extends AbstractView {
 
     return `
         <div class='view-container'>
-          <div>
-              <a href="/countries">
-                  <button>back</button>
-              </a>
+          <div class='backButtonContainer'>
+            <a href='/'>
+              <div class='backButton'>
+                <span>back</span>
+              </div>
+            </a>
           </div>
+
           <div class='countryContainaer'>
               <div class='flag'>
                   <img src="${countryData[0].flags.png}"/>
               </div>
               <div class='countryDetail'>
-                <div class='countryExplanation'>
+                <h1>${countryData[0].name.common} ${countryData[0].flag}</h1>
 
+                <div class='countryExplanation'>
                   <div class='firstCountryDetail'>
-                      <h1>${countryData[0].name.common}</h1>
                       <p><span>Native Name:</span> ${
                         countryData[0].altSpellings[1]
                       }</p>
@@ -95,7 +96,7 @@ export default class extends AbstractView {
                       <p><span>Currencies:</span> ${currenciesArray[0].name} (${
       currenciesArray[0].symbol
     })</p>
-                      <p><span>Languages:</span> ${languages}</p>
+                      <p><span>Languages:</span> ${languagesArray}</p>
                   </div>
                 </div>
                 <div class='borderCountryDetail'>
