@@ -1,3 +1,30 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: ‘Roboto’, sans-serif;
+}
+
+nav {
+  background-color: #ABCBC7;
+  width: 100%;
+  min-height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav a {
+  color: black;
+  text-decoration: none;
+  font-size: 1.2em;
+  padding: 2vw 4vw;
+}
+
+nav a:hover {
+  color: #01A690;
+}
 
 .subHeader {
   justify-content: space-between;
@@ -8,30 +35,61 @@
 .countryCard {
   display: flex;
   flex-direction: column;
-  box-shadow: 5px 5px 5px lightgray;
   width: 20%;
-  padding: 1em;
-  gap: 10px;
   justify-content: center;
+  outline: 1px solid black;
+  margin: 0 auto;
 }
 
-.countryFlag {
+.countryCard:hover {
+  transform: scale(1.2);
+}
+
+.flags img {
+  outline: 1px solid black;
   width: 100%;
+  height: 150px;
+  margin: 0%;
 }
 
-img {
-  width: 100%;
+a {
+  text-decoration: none;
 }
 
-.countryInfo {
-  display: flex;
-  flex-direction: column;
+.name {
+  padding: 0px 20px;
+  margin: 10% 0px 10% 0px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.num-pop {
+  padding: 0px 20px;
+}
+
+.region {
+  padding: 0px 20px;
+}
+
+.capital {
+  padding: 0px 20px;
+  margin: 0 0 10% 0;
 }
 
 .countryMenu {
   width: 95%;
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
   padding: 1em;
+  justify-content: center;
+  gap: 2em;
+  width: 100%;
+  margin: 5% auto;
+}
+
+.countryInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: black;
 }/*# sourceMappingURL=index.css.map */
