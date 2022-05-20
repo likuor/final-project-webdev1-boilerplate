@@ -40,6 +40,7 @@ export default class extends AbstractView {
             <div class="subHeader">
                 <div>
                     <input placeholder="Search a country" type="text" id="inputForm" name="inputForm">
+                    <buttom class="btnDarkMod"> Dark Mode</buttom>
                 </div>
             </div>
 

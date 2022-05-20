@@ -94,9 +94,7 @@ export default class extends AbstractView {
                       <p><span>Top Level Domain:</span> ${
                         countryData[0].tld
                       }</p>
-                      <p><span>Currencies:</span> ${currenciesArray[0]} (${
-      currenciesArray[1]
-    })</p>
+                      <p><span>Currencies:</span> ${currenciesArray[0]} (${currenciesArray[1]})</p>
                       <p><span>Languages:</span> ${languagesArray}</p>
                   </div>
                 </div>
