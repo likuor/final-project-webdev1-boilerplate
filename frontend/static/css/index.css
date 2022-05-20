@@ -26,6 +26,15 @@ nav a:hover {
   color: #01A690;
 }
 
+@media screen and (max-width: 750px) {
+  .countryMenu {
+    flex-direction: column;
+  }
+
+  .countryCard {
+    width: 65% !important;
+  }
+}
 .subHeader {
   justify-content: space-between;
   display: flex;
