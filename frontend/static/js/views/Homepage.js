@@ -12,7 +12,6 @@ export default class extends AbstractView {
     const h1 = document.createElement('h1');
     const img = document.createElement('img');
     h1.innerHTML = 'Title';
-    // img.src = '../../img/hero.jpg';
 
     return `
     <div class='container'>
