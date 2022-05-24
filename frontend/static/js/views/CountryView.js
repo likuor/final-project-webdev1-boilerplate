@@ -15,7 +15,6 @@ export default class extends AbstractView {
     const countryData = countries.filter((value) => {
       return value['cca3'] === id;
     });
-    console.log(countryData);
 
     const languagesArray = [];
     const borders = [];
@@ -33,7 +32,6 @@ export default class extends AbstractView {
 
         case 'currencies':
           for (const key in countryData[0][dataTitle]) {
-            console.log(countryData[0][dataTitle][key].name);
             array.push(countryData[0][dataTitle][key].name);
             array.push(countryData[0][dataTitle][key].symbol);
           }
@@ -94,7 +92,9 @@ export default class extends AbstractView {
                       <p><span>Top Level Domain:</span> ${
                         countryData[0].tld
                       }</p>
-                      <p><span>Currencies:</span> ${currenciesArray[0]} (${currenciesArray[1]})</p>
+                      <p><span>Currencies:</span> ${currenciesArray[0]} (${
+      currenciesArray[1]
+    })</p>
                       <p><span>Languages:</span> ${languagesArray}</p>
                   </div>
                 </div>

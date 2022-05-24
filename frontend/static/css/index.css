@@ -26,7 +26,7 @@ nav a:hover {
   color: #01a690;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 1024px) {
   .countryMenu {
     flex-direction: column;
   }

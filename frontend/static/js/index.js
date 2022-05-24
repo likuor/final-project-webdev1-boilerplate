@@ -2,38 +2,32 @@ import { getCountries } from './countries.js';
 
 export const countries = getCountries();
 
-console.log(countries);
-
-
-
 window.addEventListener('DOMContentLoaded', (event) => {
-  const darkmodeBtn = document.querySelector(".btnDarkMod");
-    darkmodeBtn.addEventListener("click", function(){
-        const background = document.querySelector("body")
-        const textcolor = document.querySelectorAll(".countryInfo")
-        const outlineColor = document.querySelectorAll(".countryCard")
-        if (background.style.backgroundColor === "white"){
-            background.style.backgroundColor = "black"
-            background.style.color = "white"
-            for (let i of textcolor) {
-              i.style.color = "white"
-            }
-            for (let i of outlineColor) {
-              i.style.outlineColor = "white"
-            }
-            
-            
-        }else{
-            background.style.backgroundColor = "white"
-            background.style.color = "black"
-            for (let i of textcolor) {
-              i.style.color = "black"
-            }
-            for (let i of outlineColor) {
-              i.style.outlineColor = "black"
-            }
-        }
-    });
+  const darkmodeBtn = document.querySelector('.btnDarkMod');
+  darkmodeBtn.addEventListener('click', function () {
+    const background = document.querySelector('body');
+    const textcolor = document.querySelectorAll('.countryInfo');
+    const outlineColor = document.querySelectorAll('.countryCard');
+    if (background.style.backgroundColor === 'white') {
+      background.style.backgroundColor = 'black';
+      background.style.color = 'white';
+      for (let i of textcolor) {
+        i.style.color = 'white';
+      }
+      for (let i of outlineColor) {
+        i.style.outlineColor = 'white';
+      }
+    } else {
+      background.style.backgroundColor = 'white';
+      background.style.color = 'black';
+      for (let i of textcolor) {
+        i.style.color = 'black';
+      }
+      for (let i of outlineColor) {
+        i.style.outlineColor = 'black';
+      }
+    }
+  });
   const inputForm = document.getElementById('inputForm');
   const searchCountries = function () {
     if (inputForm) {
@@ -83,5 +77,3 @@ window.addEventListener('DOMContentLoaded', (event) => {
 
   searchCountries();
 });
-
-
